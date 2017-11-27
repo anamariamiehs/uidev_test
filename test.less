@@ -1,0 +1,132 @@
+@font-primary: Nunito, sans-serif;
+@logo-height: 85px;
+@max-width: 1300px;
+@spacing: 12px;
+@color-background: #e4e4e4;
+@color-highlight: #1d99d5;
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:      ~"only screen and (max-width: 529px)";
+@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl:  ~"only screen and (min-width: 1129px)";
+
+body {
+	font-family: @font-primary;
+}
+
+header, section, footer {
+	max-width: @max-width;
+	width:100%;
+	margin:auto;
+}
+
+
+section {
+	padding: @spacing 0;
+	.wrapper {
+		width: 80%;
+		margin:auto;
+		font-size: 0; //inline block fix
+
+	}
+}
+
+footer {
+	padding: 24px 0;
+	text-align: center;
+	span {
+		color: #009ddc;
+		font-size: .8em;
+	}
+}
+
+.clearfix{
+	width:100%;
+	height:1px;
+	margin-top:-1px;
+	clear:both;
+}
+
+.spacer {
+	height:1px;
+	background-color:@color-background;
+	width:100%;
+}
+.logo {
+	max-height: @logo-height;
+	max-width: 100%;
+	margin:@spacing auto;
+	display: block;
+}
+
+.background {
+	background-color:@color-background;
+}
+
+.img-responsive {
+	max-width: 100%;
+}
+
+.thumbnail {
+
+	font-size: 16px; // unset font size hack
+	box-sizing: border-box;
+	max-width: 100%;
+	display: inline-block;
+
+	.container {
+		padding:24px;
+		margin:@spacing;
+		background-color:#FFF;
+	}
+
+	width:50%;
+	@media @tablet {
+		width: 100%;
+    }
+
+    .header {
+    	padding-bottom:@spacing;
+    	margin-bottom:@spacing;
+    	border-bottom:1px solid @color-background;
+		img {
+			float:left
+		}
+		h1 {
+			float:left;
+			font-size: 1.2em;
+	    	margin: 10px;
+	    	font-weight: bold;
+		}
+		span {
+			float:right;
+			line-height: 1;
+		    color: @color-highlight;
+		    font-size: .8em;
+		    text-align: right;
+    		padding: 10px 0;
+		}
+    }
+
+    .image-container {
+    	//height: 236px;
+    	margin-bottom: @spacing;
+    	img {
+    		margin:auto;
+	    	max-height: 100%;
+	    	display: block;
+    	}
+    }
+    .caption {
+	    max-height: 100px;
+    	overflow: hidden;
+    	p {
+    		line-height: 1.5;
+    	}
+    }
+}
+
