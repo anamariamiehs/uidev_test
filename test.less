@@ -2,6 +2,7 @@
 @logo-height: 85px;
 @max-width: 1300px;
 @spacing: 12px;
+@button-height: 80px;
 @color-background: #e4e4e4;
 @color-highlight: #1d99d5;
 
@@ -13,6 +14,31 @@
 @tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
 @desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
 @desktop-xl:  ~"only screen and (min-width: 1129px)";
+
+.border-radius (@radius: 20px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+.abs-center {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
 
 body {
 	font-family: @font-primary;
@@ -113,12 +139,49 @@ footer {
     }
 
     .image-container {
-    	//height: 236px;
+    	position: relative;
     	margin-bottom: @spacing;
     	img {
     		margin:auto;
 	    	max-height: 100%;
 	    	display: block;
+    	}
+
+    	&:before {
+	    	content:'';
+	    	.abs-center();
+	    	background:#000;
+    		.transition(opacity .5s ease-in);
+	    	opacity: 0;
+	    }
+	    &:hover:before {
+	    	opacity: 0.3;
+	    }
+
+    	.button {
+    		.transition(opacity .5s ease-in);
+    		opacity: 0;
+    		position:absolute;
+    		top:50%;
+    		left:50%;
+    		margin-top:-@button-height/2;
+    		margin-left:-@button-height/2;
+    		background: @color-highlight;
+		    .border-radius(50%);
+		    width:@button-height;
+		    height:@button-height;
+		    text-align: center;
+		    cursor: pointer;
+		    &:after {
+		    	content:"›";
+		    	color:#FFF;
+		    	font-size: 3em;
+		    	line-height: 1.5;	
+		    }
+    	}
+
+    	&:hover .button {
+    		opacity: 1;
     	}
     }
     .caption {
@@ -128,5 +191,20 @@ footer {
     		line-height: 1.5;
     	}
     }
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top:0;
+	right: 0;
+	bottom:0;
+	left: 0;
+	z-index: 1000;
+	background: rgba(255,255,255,.3);
+
+	.container {
+		margin: auto;
+	}
 }
 
