@@ -4,8 +4,10 @@
 <title>Test</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="reset.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css" />
 <link rel="stylesheet/less" type="text/css" href="test.less" />
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 </head>
 
@@ -134,27 +136,33 @@
 	<span>&copy; My Possible Self 2017. All rights reserved.</span>
 </footer>
 
-<div id="modal" class="thumbnail modal">
-	<div class="container">
-		<div class="header">
-			<img class="img-responsive" src="assets/blue.jpg" alt="Happy">
-			<h1>Feeling frustrated</h1>
-			<span>SUN 17 SEPT<br/>10:34AM</span>
-			<div class="clearfix"></div>
-		</div>
-		<div class="image-container">
-			<img class="img-responsive" src="assets/vanessa.jpg" alt="Vanessa">
-		</div>
-		<div class="caption">
-			<p>Went for an amazing walk along the seaside. The sunset was incredible. Very inspiring. What an astounding world we live in.</p>
+<div class="modal">
+	<div class="thumbnail">
+		<div class="container">
+			<img class="close" src="assets/close.svg" alt="x"/>
+				<div class="clearfix"></div>
+				<div class="header">
+					<img class="img-responsive" src="assets/blue.jpg" alt="Happy">
+					<h1>Feeling frustrated</h1>
+					<span>SUN 17 SEPT<br/>10:34AM</span>
+					<div class="clearfix"></div>
+				</div>
+			<div class="scrollbar">
+				<div class="image-container">
+					<img class="img-responsive" src="assets/vanessa.jpg" alt="Vanessa">
+				</div>
+				<div class="caption">
+					<p>Went for an amazing walk along the seaside. The sunset was incredible. Very inspiring. What an astounding world we live in.</p>
 
-			<p>This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. </p>
+					<p>This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. </p>
 
-			<p>Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. </p>
+					<p>Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. </p>
 
-			<p>You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? </p>
+					<p>You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? </p>
 
-			<p>So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.</p>
+					<p>So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -165,8 +173,9 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  <script
-  src="test.js"></script>
+  <script src="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="test.js"></script>
 </body>
+
 
 </html>

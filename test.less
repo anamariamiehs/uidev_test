@@ -201,10 +201,35 @@ footer {
 	bottom:0;
 	left: 0;
 	z-index: 1000;
-	background: rgba(255,255,255,.3);
+	background: rgba(0,0,0,.4);
 
-	.container {
-		margin: auto;
+	.close {
+		width:20px;
+		float:right;
+		cursor: pointer;
+	}
+
+	.thumbnail {
+		display: block;
+		margin:auto;
+		margin-top:40px;
+		width: 70%;
+
+		.caption {
+			max-height: unset;
+			overflow: visible;
+		}
+	}
+
+	.image-container {
+		&:hover:before {
+	    	opacity: 0;
+	    }
+	}
+
+	.scrollbar {
+		max-height: 400px;
+		overflow: hidden;
 	}
 }
 
